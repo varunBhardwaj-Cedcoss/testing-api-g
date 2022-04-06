@@ -16,7 +16,7 @@ class IndexController extends Controller
                 CURLOPT_CUSTOMREQUEST => "POST",
                 CURLOPT_POSTFIELDS => json_encode($data),
                 CURLOPT_HTTPHEADER => [
-                    "accept: application/json"
+                    "Content-Type: application/json"
                 ],
             ]);
             $response = json_decode(curl_exec($curl));

@@ -6,7 +6,6 @@ class IndexController extends Controller
 {
     public function indexAction()
     {
-        if ($this->request->isPost()) {
             $curl = curl_init();
 
             curl_setopt_array($curl, [
@@ -29,6 +28,5 @@ class IndexController extends Controller
             /* echo '<pre>';
             print_r($response);
             die; */
-        }
     }
 }
